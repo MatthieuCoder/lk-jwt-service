@@ -125,6 +125,7 @@ Set environment variables to configure the service:
 | `LIVEKIT_JWT_BIND`                            | Address to bind the server to                                 | ❌ No, ⚠️ mutually exclusive with `LIVEKIT_JWT_PORT` | `:8080` |
 | `LIVEKIT_JWT_PORT`                            | ⚠️ Deprecated Port to bind the server to                      | ❌ No, ⚠️ mutually exclusive with `LIVEKIT_JWT_BIND` |         |
 | `LIVEKIT_FULL_ACCESS_HOMESERVERS`             | Comma-separated list of full-access homeservers (`*` for all) | ❌ No                                                | `*`     |
+| `LIVEKIT_JWT_NETWORK`                         | The kind of network socket we will be listening on (`tcp` for regular http, or `unix` for listening on a unix socket) | ❌ No                                                | `tcp`   |
 
 > [!IMPORTANT]
 > By default, the LiveKit SFU auto-creates rooms for all users. To ensure proper
