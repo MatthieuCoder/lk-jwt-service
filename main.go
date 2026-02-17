@@ -45,7 +45,7 @@ type Config struct {
 	SkipVerifyTLS         bool
 	FullAccessHomeservers []string
 	LkJwtBind             string
-	lkJwtNetworkType      string
+	LkJwtNetworkType      string
 }
 type MatrixRTCMemberType struct {
 	ID              string `json:"id"`
@@ -621,7 +621,7 @@ func parseConfig() (*Config, error) {
 		SkipVerifyTLS:         skipVerifyTLS,
 		FullAccessHomeservers: strings.Fields(strings.ReplaceAll(fullAccessHomeservers, ",", " ")),
 		LkJwtBind:             lkJwtBind,
-		lkJwtNetworkType:      lkJwtNetworkType,
+		LkJwtNetworkType:      lkJwtNetworkType,
 	}, nil
 }
 
@@ -642,7 +642,7 @@ func main() {
 		fullAccessHomeservers: config.FullAccessHomeservers,
 	}
 
-	listener, err := net.Listen(config.lkJwtNetworkType, config.LkJwtBind)
+	listener, err := net.Listen(config.LkJwtNetworkType, config.LkJwtBind)
 	if err != nil {
 		log.Fatal(err)
 	}
